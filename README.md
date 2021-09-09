@@ -24,8 +24,8 @@ full feature list
 
 Wireframes
 
-![wireframe](wireframe.jpg)
-![car_concept](sillhouette.jpg)
+![wireframe](README_files/wireframe.jpg)
+![car_concept](README_files/sillhouette.jpg)
 
 LinkedIn
 
