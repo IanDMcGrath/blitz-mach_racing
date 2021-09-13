@@ -8,7 +8,8 @@ body {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    font-family: 'Poppins';
+    font-family: 'Racing Sans One', cursive;
+    /* font-family: 'Poppins'; */
     color: white;
     background-color: rgb(0, 80, 133);
 }
@@ -55,12 +56,17 @@ div.main h1 {
 
 div.main h1:before{
     content: url(assets/images/af5068d759a9e482e0ed79e7a1ceb240.png);
-    display: inline-block;
+    position: relative;
+    bottom: -5px;
+    width: 200px;
+    /* display: inline-block; */
     /* width: 50px; */
 }
 
 div.main h1:after{
-    content: url(assets/images/af5068d759a9e482e0ed79e7a1ceb240.png);
+    content: "  "url(assets/images/af5068d759a9e482e0ed79e7a1ceb240.png);
+    position: relative;
+    bottom: -5px;
 }
 
 body div.main div.top {
