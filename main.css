@@ -47,8 +47,6 @@ table {
 	border-spacing: 0;
 }
 
-/* ^^^^ CSS RESET ^^^ */
-
 :root {
   --white: rgb(241, 241, 241);
   --white2: rgba(255, 255, 255, 0.281);
@@ -74,6 +72,10 @@ a {
   cursor: pointer;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 li {
   list-style: none;
 }
@@ -88,10 +90,14 @@ div.main h1 {
   color: white;
 }
 
+div.top > h1 {
+  margin-bottom: 1rem;
+}
+
 div.main h1:before{
   content: url(assets/images/af5068d759a9e482e0ed79e7a1ceb240.png);
   position: relative;
-  bottom: -5px;
+  bottom: -0.25rem;
   width: 200px;
   /* display: inline-block; */
   /* width: 50px; */
@@ -100,31 +106,31 @@ div.main h1:before{
 div.main h1:after{
   content: "  "url(assets/images/af5068d759a9e482e0ed79e7a1ceb240.png);
   position: relative;
-  bottom: -5px;
+  bottom: -0.25rem;
 }
 
-aside {
+/* .group3 {
   position: absolute;
   right: 10%;
-}
+} */
 
-aside ul li{
+.group3 ul li{
   padding: 5px;
 }
 
-aside ul {
+/* .group3 ul {
   padding-top: 400px;
   padding-left: 20px;
-}
+} */
 
-aside a.twitter {
+.group3 a.twitter {
   color: white;
 }
-aside img.twitter {
+.group3 img.twitter {
   width: 16px;
 }
 
-aside a.git {
+.group3 a.git {
   color: white;
 }
 
@@ -136,7 +142,7 @@ h2.controls {
 }
 
 div.controls {
-  display:flex;
+  display: flex;
   flex-direction: row;
   padding: 20px;
 }
@@ -149,11 +155,19 @@ div.controls-keys {
   border: solid 1px black;
 }
 
+div.bottom-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 div.bottom {
   padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  max-width: 75rem;
 }
 
 .animated-fullscreen {
@@ -228,18 +242,16 @@ div.bottom {
   align-items: center;
 }
 
-#game-viewport {
-  width: 1200px;
-  height: 700px;
-  position: absolute;
+.mid-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-#hud {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0%;
-  z-index: 11;
+#game-viewport {
+  max-width: 1200px;
+  max-height: 700px;
+  position: relative;
 }
 
 div#game-viewport:fullscreen > canvas.webgl {
@@ -252,5 +264,83 @@ div#game-viewport:fullscreen > canvas.webgl {
   mask-image: url('../static/widgets/progress_bar/progress_bar_flow.png');
   opacity: 80%;
 } */
+
+.group2 {
+
+}
+#hud {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  z-index: 1000;
+}
+
+.racer-speed-container {
+  background-color: rgba(0, 0, 0, 0.192);
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  margin: 1rem;
+}
+
+.racer-speed {
+  margin: 0.5rem;
+}
+
+.speed-number-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.speed-number {
+  font-size: 2rem;
+}
+
+.speed-unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.racer-speed-bar {
+  border: solid white 0.2rem;
+  height: 1rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+
+.racer-speed-bar-fill {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  content: 'here for japes';
+  z-index: 1000;
+  transition: width 0.1s;
+}
+
+.elapsed-time-container {
+  margin: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.192);
+  position: absolute;
+  width: 15rem;
+}
+
+.elapsed-time {
+  margin: 0.5rem;
+  display: flex;
+}
+
+.time-label {
+  margin-right: 1rem;
+}
+
+.racer-timer {
+  font-kerning: none;
+  letter-spacing: 0px;
+  font-size: 2rem;
+}
+
 
 /*# sourceMappingURL=main.css.map*/
