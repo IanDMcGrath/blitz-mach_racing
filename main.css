@@ -95,7 +95,8 @@ div.top > h1 {
 }
 
 div.main h1:before{
-  content: url(assets/images/af5068d759a9e482e0ed79e7a1ceb240.png);
+  /* CONTENT TAG HAS STOPPED WORKING IN CURRENT VERSION */
+  /* content: url('../../../static/pagestyle/stripestyling.png'); */
   position: relative;
   bottom: -0.25rem;
   width: 200px;
@@ -104,7 +105,8 @@ div.main h1:before{
 }
 
 div.main h1:after{
-  content: "  "url(assets/images/af5068d759a9e482e0ed79e7a1ceb240.png);
+  /* CONTENT TAG HAS STOPPED WORKING IN CURRENT VERSION */
+  /* content: "  "url('../../../static/pagestyle/stripestyling.png'); */
   position: relative;
   bottom: -0.25rem;
 }
