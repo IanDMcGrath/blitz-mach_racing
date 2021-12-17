@@ -469,6 +469,10 @@ div#game-viewport:fullscreen > canvas.webgl {
   display: flex;
 }
 
+#debug-canvas {
+  position: absolute;
+}
+
 #debug {
   color: white;
   background-color: rgba(0, 0, 0, 0.432);
