@@ -57,7 +57,6 @@ html, body {
   height: 100vh;
   width: 100vw;
   font-family: 'Racing Sans One', cursive;
-  /* font-family: 'Poppins'; */
   color: white;
   background-color: rgb(0, 80, 133);
   display: flex;
@@ -157,6 +156,16 @@ div.controls-keys {
   border: solid 1px black;
 }
 
+:root {
+  --infoDir: row;
+}
+
+@media only screen and (max-width: 30rem) {
+  :root {
+    --infoDir: column;
+  }
+}
+
 div.bottom-container {
   width: 100%;
   display: flex;
@@ -166,7 +175,7 @@ div.bottom-container {
 div.bottom {
   padding: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: var(--infoDir);
   justify-content: space-between;
   width: 100%;
   max-width: 75rem;
@@ -249,7 +258,7 @@ div.bottom {
 }
 
 .mid-container {
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
 }
@@ -311,7 +320,11 @@ div#game-viewport:fullscreen > canvas.webgl {
 }
 
 .press-start-menu {
-  min-width: 32rem;
+  min-width: min(32rem, 20vw);
+}
+
+.press-start.blinking {
+  font-size: min(1rem, 7vw);
 }
 
 .start-menu, .pause-menu, .results-menu {
@@ -324,7 +337,7 @@ div#game-viewport:fullscreen > canvas.webgl {
 }
 
 .press-start-title {
-  font-size: 5rem;
+  font-size: min(5rem, calc(15vw - 0.3rem));
   margin: 0rem 2rem 0.5rem 2rem;
 }
 
@@ -412,13 +425,13 @@ div#game-viewport:fullscreen > canvas.webgl {
 }
 
 .start-menu-title, .pause-menu-title, .results-menu-title {
-  font-size: 5rem;
+  font-size: min(5rem, calc(15vw - 0.3rem));
   display: flex;
   justify-content: center;
 }
 
 .start-menu-body, .pause-menu-body {
-  min-width: 30rem;
+  min-width: min(30rem, 85vw);
   margin-bottom: 1rem;
 }
 
@@ -446,7 +459,7 @@ div#game-viewport:fullscreen > canvas.webgl {
 } */
 
 .pause-menu-title {
-  font-size: 5rem;
+  font-size: min(5rem, calc(15vw - 0.3rem));
 }
 
 #fader {
