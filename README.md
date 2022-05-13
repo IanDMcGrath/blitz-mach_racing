@@ -1,43 +1,53 @@
+# MachBlitz
+## Links
 live link: https://www.ians.tech/machblitz
 
-Background
+My website: https://www.ians.tech/
 
-With a bachelor's in Virtual Technologies & Design (read: 3D generalist) and no good barrier between work and life, I plan to make a battle racing game. Building models and materials will take no time. This will be completely about learning to use Three.js api with JavaScript. I will attempt to iterate fast to deliver a game that at least doesn't hurt to look at or play.
+LinkedIn: https://www.linkedin.com/in/ianmcgrath-techartist/
+# Execution
+
+## Setting up and Testing
+```
+$ npm i
+$ npm run dev
+```
+## Publishing to gh-pages
+```
+$ git subtree push --prefix dist origin gh-pages
+```
+
+# Background
+
+This is my Three.js break-in project where I'll be leveraging my prior 3D experience to build my favorite kind of racing game and I hope you'll enjoy.
 
 
-
-You've got the furious must for fast. Choose the speed which dictates the win. Push buttons, Do moves. All oppositers tremble.
+MachBlitz is all about high speeds and tight controls. If you've got an issue with the game, please shoot me a message.
 
 Functionality & MVPs
 
-MVPs
+# MVPs
 - Car responds to player inputs
 - Game starts in a time-attack mode
 - Displayed timer in HUD
 - Displayed final time after crossing finishline
 
-future feature list
-- Race starts and you drive
-- Steer expertly to stay on the road
-- Shove other drivers or get shoved
-- Increase or decrease points based on performance
-- Rolling terminations will chop off stragglers
-- Race finish podium
+# Future Feature List
+- AI racers
+- Finish race placement
+- Inter-car collision
+- Car shoving interaction
+- Car damage
+- Racer retirement
+- SFX / VFX
+- More race tracks and track selection
 
-Wireframes
+# Wireframes
 
-![wireframe](README_files/wireframe.jpg)
-![car_concept](README_files/sillhouette.jpg)
+![wireframe](readme/wireframe.jpg)
+![car_concept](readme/sillhouette.jpg)
 
-LinkedIn
-
-MyWebsite
-
-ArtStation
-
-Twitter
-
-Technologies, Libraries, APIs
+# Technologies, Libraries, APIs
 
 * three.js
 	- JavaScript canvas rendering library
@@ -61,9 +71,8 @@ Technologies, Libraries, APIs
 
 * Photoshop
 
-* Audition
-
-Implementation Timeline
+# Implementation Timeline
+- After review, this was a very hopeful development timeline
 
 * Friday Afternoon & Weekend
 	- three.js working in browser
@@ -84,7 +93,7 @@ Implementation Timeline
 	- race end
 	- lap system (?)
 	- adjust scene meshes, the car moves now so the level should cater to it
-	- dummy ai (it just drives forward)
+	- dummy ai (it just drives forward) <- where I got ahead of myself and had to begin defering work
 	- race starting positions
 	- racer shoving and collision responses
 * Wednesday
