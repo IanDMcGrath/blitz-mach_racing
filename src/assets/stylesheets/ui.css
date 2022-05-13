@@ -1,0 +1,215 @@
+#hud {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  z-index: 1000;
+}
+
+.invisible {
+  display: none;
+}
+
+.ui-canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.press-start-menu, .start-menu, .pause-menu, .results-menu {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  transform: translateX(50%) translateY(50%);
+  white-space: nowrap;
+}
+
+.press-start-menu {
+  min-width: min(32rem, 20vw);
+}
+
+.press-start.blinking {
+  font-size: min(1rem, 7vw);
+}
+
+.start-menu, .pause-menu, .results-menu {
+  border-radius: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.press-start-title {
+  font-size: min(5rem, calc(15vw - 0.3rem));
+  margin: 0rem 2rem 0.5rem 2rem;
+}
+
+.press-start {
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.blinking{
+  animation:blinkingText 1.2s infinite;
+}
+
+@keyframes blinkingText{
+  0%{     color: white;    }
+  49%{    color: white; }
+  60%{    color: transparent; }
+  99%{    color: transparent;  }
+  100%{   color: white;    }
+}
+
+.racer-speed-container {
+  background-color: rgba(0, 0, 0, 0.192);
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  margin: 1rem;
+}
+
+.racer-speed {
+  margin: 0.5rem;
+}
+
+.speed-number-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.speed-number {
+  font-size: 2rem;
+}
+
+.speed-unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.racer-speed-bar {
+  border: solid white 0.2rem;
+  height: 1rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+
+.racer-speed-bar-fill {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  content: 'here for japes';
+  z-index: 1000;
+  transition: width 0.1s;
+}
+
+.elapsed-time-container {
+  margin: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.192);
+  position: absolute;
+  width: 15rem;
+}
+
+.elapsed-time {
+  margin: 0.5rem;
+  display: flex;
+}
+
+.time-label {
+  margin-right: 1rem;
+}
+
+.racer-timer {
+  font-kerning: none;
+  letter-spacing: 0px;
+  font-size: 2rem;
+}
+
+.start-menu-title, .pause-menu-title, .results-menu-title {
+  font-size: min(5rem, calc(15vw - 0.3rem));
+  display: flex;
+  justify-content: center;
+}
+
+.start-menu-body, .pause-menu-body {
+  min-width: min(30rem, 85vw);
+  margin-bottom: 1rem;
+}
+
+.start-menu-option.selected, .pause-menu-option.selected, .results-menu-option.selected {
+  outline: solid 0.2rem white;
+  margin: 0.4rem;
+  padding-left: 1rem;
+}
+
+.start-menu-option, .pause-menu-option, .results-menu-option {
+  margin: 0.4rem;
+  outline: solid 0.2rem rgba(255, 255, 255, 0);
+  transition: padding-left 0.2s;
+}
+
+.results-menu-time {
+  margin: 0.4rem;
+}
+
+/* .pause-menu {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+} */
+
+.pause-menu-title {
+  font-size: min(5rem, calc(15vw - 0.3rem));
+}
+
+#fader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  /* background-color: rgba(0, 0, 0, 0.568); */
+  /* opacity: 0; */
+  transition: background-color 1s;
+}
+
+.fade-to-black {
+  background-color: black;
+  /* opacity: 1; */
+}
+
+.results-menu > .results-menu-body {
+  display: flex;
+  width: 30rem;
+  justify-content: space-between;
+}
+
+.results-menu-times {
+  margin-left: 3rem;
+}
+
+.results-menu-options {
+  width: 100%;
+}
+
+.results-menu-time {
+  display: flex;
+}
+
+#debug-canvas {
+  position: absolute;
+}
+
+#debug {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.432);
+  z-index: 10000;
+  position: absolute;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
